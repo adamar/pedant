@@ -12,21 +12,6 @@ type State struct {
 	valid bool
 }
 
-func main() {
-
-	fileName := "/tmp/file.json"
-
-	status := make(chan *State)
-
-	go func() {
-		for state := range status {
-			log.Print(state)
-		}
-	}()
-
-	trackFile(fileName, status)
-
-}
 
 func errHandler(err error) {
 
