@@ -26,7 +26,7 @@ func validateJSON(jdata []byte) bool {
 	return json.Unmarshal(jdata, &jmap) == nil
 }
 
-func trackFile(filename string, status chan<- *State) {
+func TrackFile(filename string, status chan<- *State) {
 
 	watcher, err := inotify.NewWatcher()
 	errHandler(err)
