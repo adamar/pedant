@@ -1,4 +1,4 @@
-package main
+package pedant
 
 import (
 	"code.google.com/p/go.exp/inotify"
